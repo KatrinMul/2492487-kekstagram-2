@@ -26,3 +26,14 @@ const getNumber = (string) => {
   }
   return parseInt(numberString, 10);
 };
+
+const getFloorAndPadik = (floorQuantity, apartmentQuantityOfFloor, apartmentNumber) => {
+  const apartmentQuantityOfPadik = apartmentQuantityOfFloor * floorQuantity;
+  const padikNumber = Math.ceil(apartmentNumber / apartmentQuantityOfPadik);
+  const apartmentBelow = apartmentNumber - ((padikNumber - 1) * apartmentQuantityOfPadik);
+  const floorNumber = Math.ceil(apartmentBelow / apartmentQuantityOfFloor);
+  return (padikAndFloor = [padikNumber, floorNumber]);
+};
+
+console.log(getFloorAndPadik(8, 3, 73));
+
