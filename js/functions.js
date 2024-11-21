@@ -32,7 +32,7 @@ const getFloorAndPadik = (floorQuantity, apartmentQuantityOfFloor, apartmentNumb
   const padikNumber = Math.ceil(apartmentNumber / apartmentQuantityOfPadik);
   const apartmentBelow = apartmentNumber - ((padikNumber - 1) * apartmentQuantityOfPadik);
   const floorNumber = Math.ceil(apartmentBelow / apartmentQuantityOfFloor);
-  return (padikAndFloor = [padikNumber, floorNumber]);
+  return [padikNumber, floorNumber];
 };
 
 console.log(getFloorAndPadik(8, 3, 73));
